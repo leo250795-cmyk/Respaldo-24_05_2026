@@ -1,9 +1,0 @@
-{
-    "rvol_bonus": 20,
-    "gap_bonus": 20,
-    "squeeze_bonus": 15,
-    "sector_bonus": 10,
-    "catalyst_bonus": 10,
-    "best_sector": "Energy/Nuclear",
-    "best_sector_win_rate": 100.0
-}
