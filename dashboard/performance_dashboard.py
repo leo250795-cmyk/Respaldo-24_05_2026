@@ -114,3 +114,7 @@ if "AI Conviction" in df.columns:
         conviction_stats,
         use_container_width=True
     )
+import time
+
+time.sleep(60)
+st.rerun()

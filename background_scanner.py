@@ -1,9 +1,21 @@
+import json
 import time
 import pandas as pd
 import yfinance as yf
 
 from config.market_universe import TICKERS, DISCOVERY_LIST
 from engines.scoring_engine import calculate_opportunity_score
+
+try:
+    with open("config/optimized_ai_weights.json", "r", encoding="utf-8") as f:
+        optimized_weights = json.load(f)
+except FileNotFoundError:
+    optimized_weights = {
+        "smart_money_bonus": 10,
+        "conviction_bonus": 10,
+        "opportunity_bonus": 10,
+        "risk_penalty": -10,
+    }
 
 ALL_TICKERS = list(set(TICKERS + DISCOVERY_LIST))
 
@@ -104,6 +116,17 @@ while True:
                 market_leader,
                 sector_rotation_signal
             )
+
+            if institutional_signal == "🏦 Institutional Buying":
+                opportunity_score += optimized_weights.get("smart_money_bonus", 10)
+
+            if autonomous_rank >= 80:
+                opportunity_score += optimized_weights.get("opportunity_bonus", 10)
+
+            if rvol < 1:
+                opportunity_score += optimized_weights.get("risk_penalty", -10)
+
+            opportunity_score = min(max(opportunity_score, 0), 100)
 
             smart_money_signal = "Neutral"
 

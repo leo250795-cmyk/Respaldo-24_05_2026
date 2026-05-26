@@ -132,3 +132,8 @@ if "Portfolio Priority" in df.columns:
         portfolio_feed.tail(20),
         use_container_width=True
     )
+    
+import time
+
+time.sleep(30)
+st.rerun()

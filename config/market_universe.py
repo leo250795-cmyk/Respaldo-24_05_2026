@@ -1,6 +1,7 @@
 TICKERS = [
     # Semiconductors / AI infra
-    "NVDA", "AMD", "SMCI", "MU", "ARM", "AVGO", "MRVL", "TSM",
+    # Semiconductors / AI infra
+    "NVDA", "AMD", "SMCI", "MU", "NVTS", "ARM", "AVGO", "MRVL", "TSM",
 
     # AI software
     "PLTR", "AI", "BBAI", "SOUN", "PATH", "SNOW", "DDOG",
@@ -22,7 +23,7 @@ TICKERS = [
 ]
 
 DISCOVERY_LIST = [
-    "SOUN", "BBAI", "QUBT", "RGTI", "QBTS", "IONQ",
+    "NVTS","SOUN", "BBAI", "QUBT", "RGTI", "QBTS", "IONQ",
     "RKLB", "ASTS", "ACHR", "JOBY", "LUNR",
     "SMR", "OKLO", "NNE", "EOSE",
     "MARA", "RIOT", "IREN", "COIN", "MSTR",

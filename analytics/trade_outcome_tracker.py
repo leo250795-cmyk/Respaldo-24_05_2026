@@ -11,8 +11,8 @@ if len(df) == 0:
     print("No scanner data.")
     exit()
 
-print("Columnas disponibles:")
-print(df.columns.tolist())
+#print("Columnas disponibles:")
+#print(df.columns.tolist())
 
 results = []
 
