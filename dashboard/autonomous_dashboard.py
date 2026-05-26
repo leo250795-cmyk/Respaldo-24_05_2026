@@ -25,8 +25,14 @@ if len(df) == 0:
 st.subheader("🚀 Latest Autonomous Signals")
 
 main_columns = [
-    "Ticker",
     "Price",
+    "Entry Price",
+    "Stop Loss",
+    "Target 1",
+    "Target 2",
+    "Target 3",
+    "Trade Plan",
+    "Ticker",
     "% Change",
     "RVOL",
     "AI Signal",
